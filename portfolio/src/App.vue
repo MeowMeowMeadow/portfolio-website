@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/gamedev">Game Dev</router-link> |
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
+    <router-link to="/gamedev">Game Dev</router-link>
     <router-link to="/webdev">Web Dev</router-link>
   </nav>
   <router-view/>
@@ -18,15 +18,32 @@
 }
 
 nav {
-  padding: 30px;
+  position: sticky;
+  background-color: darkcyan;
+  display: block;
+  overflow: hidden;
+  width: 100%;
 }
 
 nav a {
-  font-weight: bold;
+  padding: 16px 14px;
+  margin: 0;
+  background-color: darkcyan;
+  display: flex;
+  float: left;
+  font-size: 1.5em;
   color: #2c3e50;
+}
+
+nav a:hover {
+  background-color: rgb(1, 48, 48);
+  font-weight: bold;
+  color: #42b983;
+
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
+  background-color: rgb(1, 48, 48);
 }
 </style>
