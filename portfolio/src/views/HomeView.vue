@@ -17,7 +17,9 @@ export default {
 {
   background-color: aqua;
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 40vw;
+  align-items: center;
 }
 </style>
