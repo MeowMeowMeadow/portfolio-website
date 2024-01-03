@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <h1>Meadow Davis' Portfolio</h1>
+
+    <div class=""></div>
   </div>
 </template>
 
