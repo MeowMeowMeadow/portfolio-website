@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="gameDev">
     <h1>Game Development</h1>
     <Portfolio/>
   </div>
@@ -18,3 +18,18 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.gameDev
+{
+  display: flex;
+  flex-direction: column;
+  background-color:aqua;
+  margin: auto;
+  padding: auto;
+  width: 100vw;
+  height: 40vw;
+  align-items: center;
+
+}
+</style>

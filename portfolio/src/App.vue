@@ -47,17 +47,19 @@ nav a {
   float: left;
   font-size: 1.5em;
   color: #2c3e50;
+  text-decoration: none;
 }
 
 nav a:hover {
   background-color: rgb(1, 48, 48);
   font-weight: bold;
   color: #42b983;
-
+  text-decoration: none;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
   background-color: rgb(1, 48, 48);
+  text-decoration: none;
 }
 </style>

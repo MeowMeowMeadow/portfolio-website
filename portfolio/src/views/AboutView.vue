@@ -4,14 +4,14 @@
   
     <div class="aboutMe">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Test</li>
+        <li>Test</li>
+        <li>Test</li>
       </ul>
     </div>
 
     <div class="links">
-      <p>Github: <a href="https://github.com/MeowMeowMeadow"> MeowMeowMeadow</a></p>
+      <p>Github: <a href="https://github.com/MeowMeowMeadow">MeowMeowMeadow</a></p>
       <p>Linkedin: <a href="https://www.linkedin.com/in/meadow-davis-7b56b3173/">Meadow Davis</a></p>
       <p>Itch.io: <a href="https://meadowfaust.itch.io/">meadowfaust.itch.io</a></p>
 
@@ -95,6 +95,18 @@ button
   border-radius: 3px;
   padding: 5px;
   margin-top: 20px;
+}
+
+.aboutMe ul
+{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutMe ul li
+{
+  padding: 5px;
 }
 
 .v-enter-active, .v-leave-active 
