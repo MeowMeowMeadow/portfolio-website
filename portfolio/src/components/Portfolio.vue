@@ -31,8 +31,11 @@ import Card from './PortfolioCard.vue';
 {
     display: flex;
     padding: 10px;
+    margin-top: 0;
+    margin-left: 5em;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    align-self: center;
     flex-wrap: wrap;
     gap: 1em;
 }
