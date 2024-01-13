@@ -4,20 +4,20 @@
             <div class="projImg">
             </div>
             <div class="projName">
-                <p>Name</p>
+                <p>{{ portfolio.name }}</p>
+                <p>{{ portfolio.date }}</p>
              </div>
             <div class="projInfo">
-                <p>Information</p>
+                <p>{{ portfolio.shortDescription }}</p>
             </div>
             <div class="projSkills">
-                <ul>
-                    <li>Test</li>
-                    <li>Test</li>
+                <ul v-for="tech in portfolio.skills" :key="tech">
+                    <li>{{ tech }}</li>
                 </ul>
             </div>
             <div class="projButton">
                 <button>Show More</button>
-                <button>Visit Website</button>
+                <button v-if="portfolio.link" @click.prevent="open(portfolio.link)">Visit Website</button>
             </div>
         </div>
     </Transition>
@@ -27,9 +27,15 @@
 export default
 {
     name: "Card",
-    data()
-    {
-
+    props: {
+        portfolio: {
+            type: Object
+        }
+    },
+    methods: {
+        open(url) {
+            window.open(url,"_blank");
+        }
     }
 }
 </script>
@@ -58,14 +64,17 @@ export default
     border-radius: 8px;
 }
 
+.projSkills
+{
+    display: flex;
+    flex-direction: row;
+}
 .projSkills ul
 {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .projSkills ul li

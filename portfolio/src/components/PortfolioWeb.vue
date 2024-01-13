@@ -1,6 +1,6 @@
 <template>
     <div class="portfolio">
-        <div v-for="portfolio in portfolio_info" :key="portfolio.name">
+        <div v-for="portfolio in web_info" :key="portfolio.name">
             <Card :portfolio="portfolio"/>
         </div>
     </div>
@@ -17,20 +17,13 @@ import info from '../assets/info';
     },
     data() {
         return {
-            all_game: info.gameDevelopment,
             all_web: info.webDevelopment,
-            portfolio_info: [],
             web_info: [],
-            num: 4
+            num: 5
         }
     },
     created() {
             for (var i = 0; i < this.num; i++)
-            {
-                this.portfolio_info.push(this.all_game[i]);
-            }
-
-            for (var i = 0; i < 5; i++)
             {
                 this.web_info.push(this.all_web[i]);
             }
