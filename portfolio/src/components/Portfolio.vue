@@ -1,27 +1,30 @@
 <template>
     <div class="portfolio">
         <div v-for="portfolio in portfolio_info" :key="portfolio.name">
-            <Card :portfolio="portfolio"/>
+            <Card :portfolio="portfolio" @show="showModalFn"/>
         </div>
+        <Modal :showModal="showModal" @close="closeModal" v-if="showModal" :portfolioMdl="modal_info"/>
     </div>
 </template>
 
 <script>
 import Card from './PortfolioCard.vue';
 import info from '../assets/info';
+import Modal from './Modal.vue';
 
  export default {
     name: "Portfolio",
     components: {
-        Card
+        Card,
+        Modal
     },
     data() {
         return {
             all_game: info.gameDevelopment,
-            all_web: info.webDevelopment,
             portfolio_info: [],
-            web_info: [],
-            num: 4
+            num: 4,
+            showModal: false,
+            modal_info: null
         }
     },
     created() {
@@ -30,10 +33,17 @@ import info from '../assets/info';
                 this.portfolio_info.push(this.all_game[i]);
             }
 
-            for (var i = 0; i < 5; i++)
-            {
-                this.web_info.push(this.all_web[i]);
-            }
+    },
+    methods: {
+        closeModal(){
+            this.showModal = false;
+            document.getElementsByTagName("body")[0].classList.remove("modal-open");
+        },
+        showModalFn(portfolioModal) {
+            this.modal_info = portfolioModal;
+            this.showModal = true;
+            console.log(this.modal_info);
+        }
     }
  }
 </script>

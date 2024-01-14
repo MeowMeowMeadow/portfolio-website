@@ -16,7 +16,7 @@
                 </ul>
             </div>
             <div class="projButton">
-                <button>Show More</button>
+                <button @click.prevent="showModal()">Show More</button>
                 <button v-if="portfolio.link" @click.prevent="open(portfolio.link)">Visit Website</button>
             </div>
         </div>
@@ -35,6 +35,9 @@ export default
     methods: {
         open(url) {
             window.open(url,"_blank");
+        },
+        showModal(){
+            this.$emit("show", this.portfolio);
         }
     }
 }
