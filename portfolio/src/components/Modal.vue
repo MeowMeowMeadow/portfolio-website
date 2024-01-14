@@ -2,21 +2,26 @@
     <div>
         <div class="modalMask">
             <div class="modalContent">
-                <div class="modalContainer">
-                    <div class="modalTitle">
-                        {{  portfolioMdl.name }}
-                        {{  portfolioMdl.date }}
+                <Transition appear>
+                    <div class="modalContainer">
+                        <div class="modalTitle">
+                            {{  portfolioMdl.name }}
+                            {{  portfolioMdl.date }}
+                        </div>
+                        <div class="modalImage">
+                            <img :src="portfolioMdl.image"/>
+                        </div>
+                        <div class="modalDescription">
+                            {{ portfolioMdl.longDescription }}
+                        </div>
+                        <div>
+                            <span class="tech" v-for="tech in portfolioMdl.skills" :key="tech">{{ tech }}</span>
+                        </div>
+                        <div>
+                            <button @click="$emit('close')">Close</button>
+                        </div>
                     </div>
-                    <div class="modalDescription">
-                        {{ portfolioMdl.longDescription }}
-                    </div>
-                    <div>
-                        <span class="tech" v-for="tech in portfolioMdl.skills" :key="tech">{{ tech }}</span>
-                    </div>
-                    <div>
-                        <button @click="$emit('close')">Close</button>
-                    </div>
-                </div>
+                </Transition>
             </div>
         </div>
     </div>
@@ -99,6 +104,14 @@ body.modal-open {
   flex-direction: column;
   display: flex; /*added*/
   background-color: white;
+}
+
+.modalImage img
+{
+    height: 50%;
+    width: 50%;
+    max-width: 350px;
+    max-height: 500px;
 }
 
 .modalTitle

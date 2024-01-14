@@ -11,6 +11,7 @@ let info = {
                 "JavaScript",
                 "Game Writing"
             ],
+            image: require("./images/GameDev/DeadMethany.png"),
             link: "https://meadowfaust.itch.io/dead-metheny"
         },
         {
@@ -22,6 +23,7 @@ let info = {
                 "Unity",
                 "C#"
             ],
+            image: require("./images/GameDev/Uppercut.png"),
             link: "https://splitzy.itch.io/uppercut"
         },
         {
@@ -33,6 +35,7 @@ let info = {
                 "Unity",
                 "C#"
             ],
+            image: require("./images/GameDev/PoseOfFaith.png"),
             link: "https://catandmousestudios.itch.io/pose-of-faith"
         },
         {
@@ -44,6 +47,7 @@ let info = {
                 "Unity",
                 "C#"
             ],
+            image: require("./images/GameDev/BlockAssault.png"),
             link: "https://splitzy.itch.io/block-assault"
         }
     ],
@@ -59,6 +63,7 @@ let info = {
                 "Tailwind",
                 "NodeJS"
             ],
+            image: require("./images/WebDev/GGSTMoveViewer.jpg"),
             link: "https://github.com/MeowMeowMeadow/portfolio-website"
         },
         {
@@ -72,6 +77,7 @@ let info = {
                 "CSS",
                 "JSON"
             ],
+            image: require("./images/WebDev/GGSTMoveViewer.jpg"),
             link: "https://github.com/MeowMeowMeadow/strive-move-viewer"
         },
         {
@@ -83,6 +89,7 @@ let info = {
                 "HTML",
                 "CSS"
             ],
+            image: require("./images/WebDev/GGSTStats.png"),
             link: "https://github.com/MeowMeowMeadow/ggst-stats-website"
         },
         {
@@ -96,6 +103,7 @@ let info = {
                 "NodeJS",
                 "JavaScript"
             ],
+            image: require("./images/WebDev/OdinSignIn.png"),
             link: "https://meowmeowmeadow.github.io/odin-dashboard/"
         },
         {
@@ -109,6 +117,7 @@ let info = {
                 "CSS",
                 "HTML"
             ],
+            image: require("./images/WebDev/RPS.png"),
             link: "https://github.com/Splitzy/SOFT355-Coursework"
         }
 
