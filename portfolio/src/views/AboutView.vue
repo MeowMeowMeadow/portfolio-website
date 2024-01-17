@@ -3,19 +3,34 @@
     <h1 class="">About Me</h1>
   
     <div class="aboutMe">
-      <ul>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
+      <Transition appear>
+        <ul>
+          <li>A Computing & Games Development Graduate from Plymouth University with an interest in Web Development, Game Development and Web Hosting.</li>
+          <li>I am a creative person as well as getting along with other people in
+              team environments. Through my work experiences in the US and Netherlands, I had the opportunity to work and learn from different
+              cultures. I'm looking to build my career in the Software and Web development fields.</li>
+          <li>
+            <span>Programming Languages: C#, C++, JavaScript, PHP, Bash</span>
+          </li>
+          <li>
+            <span>Web Technologies: Vue, Node, HTML, CSS</span>
+          </li>
+          <li>
+            <span>Tools: Unity, Agile, Scrum, Windows, Linux</span>
+          </li>
       </ul>
+      </Transition>
     </div>
 
-    <div class="links">
-      <p>Github: <a href="https://github.com/MeowMeowMeadow">MeowMeowMeadow</a></p>
-      <p>Linkedin: <a href="https://www.linkedin.com/in/meadow-davis-7b56b3173/">Meadow Davis</a></p>
-      <p>Itch.io: <a href="https://meadowfaust.itch.io/">meadowfaust.itch.io</a></p>
-
+    <Transition appear>
+      <div class="links">
+        <p>Github: <a href="https://github.com/MeowMeowMeadow" target="_blank">MeowMeowMeadow</a></p>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/meadow-davis-7b56b3173/" target="_blank">Meadow Davis</a></p>
+        <p>Itch.io: <a href="https://meadowfaust.itch.io/" target="_blank">meadowfaust.itch.io</a></p>
+        <p>Resume/CV: Download Here</p>
     </div>
+    </Transition>
+
     <h2>Send a Message</h2>
     <Transition appear>
     <div class="contact">
@@ -97,6 +112,13 @@ button
   margin-top: 20px;
 }
 
+.aboutMe
+{
+  display: flex;
+  width: 70%;
+  font-size: 1.25rem;
+}
+
 .aboutMe ul
 {
   list-style-type: none;
@@ -107,6 +129,18 @@ button
 .aboutMe ul li
 {
   padding: 5px;
+}
+
+.links p a
+{
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.links p a:hover
+{
+  background-color: red;
 }
 
 .v-enter-active, .v-leave-active 
